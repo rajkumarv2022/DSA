@@ -75,3 +75,5 @@ int main() {
     dequeue();
     return 0;
 }
+
+//problem No 232 , 225. in leetcode.
