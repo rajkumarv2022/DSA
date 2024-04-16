@@ -10,7 +10,7 @@
 //hidding implemantation //array or linked list
 */
 
-int Queue[max],front=-1.rear=-1;
+int Queue[max],front=-1,rear=-1;
 
 //rear = (rear+1)%size
 //
@@ -30,12 +30,42 @@ else
  
 }
 
+void dequeue()
+{
+    if(front==-1)
+    {
+        printf("Queue is empty");
+    }
+    else if(front==rear)
+    {
+        front=rear=-1;
+    }
+    else
+    {
+        front = (front+1)%max;
+    }
+}
+
+void disp()
+{
+    for(int i=front;i<=rear;i++)
+    {
+        printf("%d ",Queue[i]);
+    }
+}
+
 
 
 int main() {
     
     enqueue(77);
     enqueue(88);
-
+    disp();
+    printf("\n");
+    dequeue();
+    disp();
+    printf("\n");
+    dequeue();
+    dequeue();
     return 0;
 }
