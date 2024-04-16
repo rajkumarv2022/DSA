@@ -30,7 +30,7 @@ else
  
 }
 
-void dequeue()
+int dequeue()
 {
     if(front==-1)
     {
@@ -38,20 +38,26 @@ void dequeue()
     }
     else if(front==rear)
     {
+        int del = Queue[front];
         front=rear=-1;
+        return del;
     }
     else
     {
+        int del = 
         front = (front+1)%max;
     }
 }
 
 void disp()
 {
-    for(int i=front;i<=rear;i++)
+    int i=0;
+    
+    for(i=front;i!=rear;i=(i+1)%max)
     {
         printf("%d ",Queue[i]);
     }
+    printf("%d ",Queue[i]);
 }
 
 
