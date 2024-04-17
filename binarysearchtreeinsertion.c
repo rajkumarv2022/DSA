@@ -8,6 +8,11 @@ struct node
     struct node *right;
 };
 
+    //its for complete binary tree
+   //left child = 2*i+1
+   //right child = 2*i+2
+   //parent = i/2-1
+
 struct node * root=NULL;
 
 struct node* create(int data)
